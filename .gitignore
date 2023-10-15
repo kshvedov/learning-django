@@ -1,0 +1,8 @@
+
+.vscode/
+
+*.sqlite3
+
+S10 - Templates/my_site/my_app/__pycache__/
+
+*.pyc

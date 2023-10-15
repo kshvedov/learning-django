@@ -1,0 +1,32 @@
+django-admin startproject example
+
+python manage.py startapp my_app
+
+Create a new url.py for each app for easier control later
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index')
+]
+
+and then add it in to the main url.py like:
+path('my_app/', include('my_app.urls')),
+
+--------------------------------------------------------------------------------
+
+django-admin startproject example
+
+python manage.py startapp my_app
+
+create a urls.py in app
+
+connect all the urls
+
+python manage.py migrate
+
+add the app in settings.py
+
+<app name>.apps.<config file name from apps.py>,
+
+python manage.py makemigrations my_app
